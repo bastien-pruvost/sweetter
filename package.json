@@ -1,5 +1,5 @@
 {
-  "name": "codder",
+  "name": "sweeter",
   "version": "1.0.0",
   "description": "Twitter clone with node.js",
   "main": "app.js",
@@ -22,11 +22,12 @@
   "homepage": "https://github.com/Dev-BastienPruvost/codder#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "morgan": "^1.10.0",
-    "pug": "^3.0.2"
+    "liquidjs": "^9.37.0",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
+    "nodemon": "^2.0.16",
     "onchange": "^7.1.0",
     "postcss": "^8.4.13",
     "sass": "^1.51.0"
