@@ -1,8 +1,7 @@
 :root {
   // -- Fonts --
 
-  --fontHeading: 'Red Hat Display', sans-serif;
-  --fontText: 'Red Hat Text', sans-serif;
+  --fontMain: 'Open Sans', sans-serif;
 
   // -- Colors --
 
@@ -12,13 +11,9 @@
   --greyDark: #252525;
   --black: #000000;
 
-  --primaryLight: #ffdb39;
-  --primary: #ffc100;
-  --primaryDark: rgb(223, 163, 12);
-
-  --accentLight: #778dcf;
-  --accent: #4261bd;
-  --accentDark: #2a3e79;
+  --primaryLight: #569ac7;
+  --primary: #1d9bf0;
+  --primaryDark: #0d77bd;
 
   --shadowColor: #85858528;
 }

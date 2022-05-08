@@ -1,3 +1,4 @@
-h1 {
-  color: yellow;
+.app {
+  display: grid;
+  grid-template-columns: auto 1fr 350px;
 }

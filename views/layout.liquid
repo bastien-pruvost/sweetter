@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="/styles/css/index.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Sweeter</title>
+</head>
+
+<body>
+
+  <div class="app wrapper--large">
+
+    <div class="sidebar-left">
+      {% include './includes/sidebar-left.liquid' %}
+    </div>
+
+    <div class="main-container">
+      {% block %}{% endblock %}
+    </div>
+
+    <div class="sidebar-right">
+      {% include './includes/sidebar-right.liquid' %}
+    </div>
+
+  </div>
+
+</body>
+
+</html>
