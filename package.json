@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "sass": "sass --watch ./public/styles/scss/:./public/styles/unprefixed-css/ --style expanded",
-    "prefix": "postcss ./public/styles/unprefixed-css/ --use autoprefixer -d ./public/styles/css/",
+    "prefix": "postcss ./public/styles/unprefixed-css/*.css --use autoprefixer -d ./public/styles/css/",
     "autoprefix": "onchange \"./public/styles/unprefixed-css/*.css\" -- npm run prefix"
   },
   "browserslist": "defaults",
