@@ -1,0 +1,34 @@
+{
+  "name": "codder",
+  "version": "1.0.0",
+  "description": "Twitter clone with node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "sass": "sass --watch ./public/styles/scss/:./public/styles/unprefixed-css/ --style expanded",
+    "prefix": "postcss ./public/styles/unprefixed-css/ --use autoprefixer -d ./public/styles/css/",
+    "autoprefix": "onchange \"./public/styles/unprefixed-css/*.css\" -- npm run prefix"
+  },
+  "browserslist": "defaults",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-BastienPruvost/codder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dev-BastienPruvost/codder/issues"
+  },
+  "homepage": "https://github.com/Dev-BastienPruvost/codder#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.13",
+    "sass": "^1.51.0"
+  }
+}

@@ -1,0 +1,40 @@
+// Reset css
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0px;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--greyLight);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--greyMedium);
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.4rem var(--shadowColor);
+  }
+}
+
+body {
+  position: relative;
+}
+
+input {
+  &::-webkit-inner-spin-button {
+    opacity: 1;
+  }
+}
