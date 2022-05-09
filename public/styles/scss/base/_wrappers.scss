@@ -6,23 +6,23 @@
 .wrapper--large {
   @extend .wrapper;
   max-width: 1200px;
-  width: 90%;
+  width: 95%;
 }
 
 .wrapper--medium {
   @extend .wrapper;
   max-width: 1000px;
-  width: 90%;
+  width: 95%;
 }
 
 .wrapper--header {
   @extend .wrapper;
   max-width: 1200px;
-  width: 90%;
+  width: 95%;
 }
 
 .wrapper--footer {
   @extend .wrapper;
   max-width: 1200px;
-  width: 90%;
+  width: 95%;
 }

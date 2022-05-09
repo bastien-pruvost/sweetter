@@ -1,11 +1,25 @@
 .sidebar-left {
-  padding-right: 2rem;
+  padding: 0 2rem;
 }
-
 .sidebar-left__logo {
-  width: 50px;
+  @include flex(flex-start, center, row);
+  height: 6rem;
+  margin-bottom: 2rem;
 }
-
+.sidebar-left__logo__img {
+  width: 4rem;
+  padding-top: 0.5rem;
+}
+.sidebar-left__logo__brand {
+  display: inline-block;
+  margin-left: 1rem;
+}
 .navbar__links {
   display: block;
+  padding: 1rem 0;
+}
+.navbar__icons {
+  margin-left: 0.75rem;
+  margin-right: 2rem;
+  font-size: 2.25rem;
 }

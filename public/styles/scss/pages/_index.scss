@@ -1,4 +1,11 @@
-.app {
-  display: grid;
-  grid-template-columns: auto 1fr 350px;
+.main-container {
+  padding: 0rem 2rem;
+  border-left: 1px solid var(--greyLight);
+  border-right: 1px solid var(--greyLight);
+  min-height: 100vh;
+}
+
+.main-header {
+  @include flex(space-between, center, row);
+  height: 6rem;
 }

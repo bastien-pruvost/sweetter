@@ -1,0 +1,21 @@
+.sidebar-right {
+  padding: 0rem 2rem;
+}
+
+.search-header {
+  @include flex(stretch, stretch, row);
+  height: 6rem;
+  padding: 0.8rem 0;
+}
+
+.searchbar {
+  padding: 0.2rem 1rem;
+  border-radius: 10rem;
+  outline: none;
+  border: none;
+  background-color: var(--greyLight);
+
+  &:focus {
+    border: 1px solid var(--greyMedium);
+  }
+}
