@@ -1,25 +1,66 @@
 .sidebar-left {
   padding: 0 2rem;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
+
 .sidebar-left__logo {
   @include flex(flex-start, center, row);
   height: 6rem;
   margin-bottom: 2rem;
 }
+
 .sidebar-left__logo__img {
   width: 4rem;
   padding-top: 0.5rem;
 }
+
 .sidebar-left__logo__brand {
   display: inline-block;
   margin-left: 1rem;
 }
-.navbar__links {
+
+.navbar__link {
   display: block;
   margin: 2rem 0;
 }
-.navbar__icons {
+
+.navbar__link__icon {
   margin-left: 0.75rem;
   margin-right: 2rem;
   font-size: 2.25rem;
+}
+.navbar__sweeter-btn-icon {
+  display: none;
+}
+
+@include tablet-only {
+  .sidebar-left {
+    @include flex(flex-start, center, column);
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+  .sidebar-left__logo__brand {
+    display: none;
+  }
+  .navbar__link {
+    @include flex;
+  }
+  .navbar__link__icon {
+    margin: auto;
+  }
+  .navbar__link__text {
+    display: none;
+  }
+  .navbar__sweeter-btn-icon {
+    display: inline-block;
+  }
+}
+
+@include mobile-only {
+  .sidebar-left {
+    padding: 0 0.5rem;
+  }
 }

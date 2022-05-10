@@ -21,3 +21,9 @@
     border: 1px solid var(--greyMedium);
   }
 }
+
+@include mobile-only {
+  .sidebar-right {
+    display: none;
+  }
+}

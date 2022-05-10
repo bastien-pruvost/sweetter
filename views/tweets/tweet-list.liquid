@@ -5,22 +5,36 @@
   <h2>Accueil</h2>
 </header>
 
-<main class="tweet-list">
+<main>
+
+  <section class="tweet-list">
+
+    {% if tweets %}
+
+    {% for tweet in tweets %}
+    <div class="tweet">
+
+      <div class="tweet__profile">
+        USER -- @UserOne
+      </div>
+
+      <div class="tweet__content">
+        {{ tweet.content }}
+      </div>
+
+    </div>
+    {% endfor %}
+
+    {% endif %}
 
 
-  <div class="tweet-container">
 
 
-    TWEET
-  </div>
 
+
+  </section>
 
 </main>
-
-
-
-
-
 
 
 {% endblock %}

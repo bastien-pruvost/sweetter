@@ -1,0 +1,32 @@
+{% layout '../layout.liquid' %}
+
+{% block %}
+
+<header class="main-header">
+  <h2>Rediger un sweet</h2>
+</header>
+
+<main>
+
+  <form action="/api/tweets" method="post" class="tweet-form">
+    <textarea name="content" id="content" placeholder="Quoi de neuf ?" class="tweet-form__text"></textarea>
+
+    {% if errors %}
+    <ul>
+
+      {% for error in errors %}
+      <li class="tweet-form__error">{{ error }}</li>
+      {% endfor %}
+
+    </ul>
+    {% endif %}
+
+    <input type="submit" class="tweet-form__submit btn btn--primary">
+  </form>
+
+
+</main>
+
+
+
+{% endblock %}

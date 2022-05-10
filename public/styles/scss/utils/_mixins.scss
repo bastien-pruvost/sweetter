@@ -11,13 +11,13 @@
 }
 
 @mixin mobile-only {
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     @content;
   }
 }
 
 @mixin tablet-only {
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     @content;
   }
 }

@@ -2,3 +2,9 @@
   display: grid;
   grid-template-columns: auto 1fr 250px;
 }
+
+@include mobile-only {
+  .app {
+    grid-template-columns: auto 1fr;
+  }
+}
