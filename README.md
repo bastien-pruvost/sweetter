@@ -17,7 +17,7 @@ Clone of twitter to practice in Node.js (with Dyma.fr courses)
 
 ### Clone the repo :
 
-git clone https://github.com/Dev-BastienPruvost/sweeter.git
+git clone https://github.com/Dev-BastienPruvost/sweetter.git
 
 ### Install dependencies :
 

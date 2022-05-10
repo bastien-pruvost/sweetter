@@ -1,5 +1,5 @@
 {
-  "name": "sweeter",
+  "name": "sweetter",
   "version": "1.0.0",
   "description": "Twitter clone with node.js",
   "main": "app.js",
@@ -12,14 +12,14 @@
   "browserslist": "defaults",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dev-BastienPruvost/codder.git"
+    "url": "git+https://github.com/Dev-BastienPruvost/sweetter.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dev-BastienPruvost/codder/issues"
+    "url": "https://github.com/Dev-BastienPruvost/sweetter/issues"
   },
-  "homepage": "https://github.com/Dev-BastienPruvost/codder#readme",
+  "homepage": "https://github.com/Dev-BastienPruvost/sweetter#readme",
   "dependencies": {
     "express": "^4.18.1",
     "liquidjs": "^9.37.0",

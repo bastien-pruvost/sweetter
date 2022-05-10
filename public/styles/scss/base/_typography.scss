@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: var(--fontMain);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1;
   color: var(--greyDark);
 }
@@ -14,9 +14,15 @@ h1 {
   font-weight: 700;
   color: var(--primary);
 }
+
 h2 {
   font-size: 1.8rem;
 }
+
 strong {
   font-weight: 500;
+}
+
+.navbar__links {
+  font-size: 2rem;
 }
