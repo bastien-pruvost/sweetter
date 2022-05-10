@@ -1,10 +1,11 @@
 const express = require('express');
 const morgan = require('morgan');
-const port = process.env.PORT || 3000;
 const path = require('path');
-const app = express();
-
 const index = require('./routes/');
+require('./database');
+
+const port = process.env.PORT || 3000;
+const app = express();
 
 // Render Liquid
 const { Liquid } = require('liquidjs');
