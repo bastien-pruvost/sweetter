@@ -1,8 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const index = require('./routes/');
-require('./database');
+const index = require('./routes/index');
+require('./database/index');
 
 const port = process.env.PORT || 3000;
 const app = express();
