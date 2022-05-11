@@ -1,40 +1,17 @@
-{% layout '../layout.liquid' %}
-{% block %}
+{% if tweets %}
+{% for tweet in tweets %}
+<div class="tweet">
 
-<header class="main-header">
-  <h2>Accueil</h2>
-</header>
+  <div class="tweet__profile">
+    USER -- @UserOne
+  </div>
 
-<main>
+  <div class="tweet__content">
+    {{ tweet.content }}
+  </div>
 
-  <section class="tweet-list">
+  <a href="#" class="btn tweet__delete-btn" data-tweetid="{{ tweet._id }}"><i class="fa-solid fa-trash-can icon"></i></a>
 
-    {% if tweets %}
-
-    {% for tweet in tweets %}
-    <div class="tweet">
-
-      <div class="tweet__profile">
-        USER -- @UserOne
-      </div>
-
-      <div class="tweet__content">
-        {{ tweet.content }}
-      </div>
-
-    </div>
-    {% endfor %}
-
-    {% endif %}
-
-
-
-
-
-
-  </section>
-
-</main>
-
-
-{% endblock %}
+</div>
+{% endfor %}
+{% endif %}

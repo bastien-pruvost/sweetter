@@ -4,7 +4,8 @@
   "description": "Twitter clone with node.js",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "SET NODE_ENV=development&& nodemon app.js",
+    "start:prod": "SET NODE_ENV=production&& nodemon app.js",
     "sass": "sass --watch ./public/styles/scss/:./public/styles/unprefixed-css/ --style expanded",
     "prefix": "postcss ./public/styles/unprefixed-css/*.css --use autoprefixer -d ./public/styles/css/",
     "autoprefix": "onchange \"./public/styles/unprefixed-css/*.css\" -- npm run prefix"
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/Dev-BastienPruvost/sweetter#readme",
   "dependencies": {
+    "errorhandler": "^1.5.1",
     "express": "^4.18.1",
     "liquidjs": "^9.37.0",
     "mongoose": "^6.3.3",

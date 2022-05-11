@@ -37,9 +37,23 @@
 }
 
 .tweet {
+  @include flex(flex-start, stretch, column);
   border-bottom: 1px solid var(--greyLight);
   padding: 2rem 0;
 }
 .tweet__profile {
   margin-bottom: 1rem;
+}
+
+.tweet__delete-btn {
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-left: auto;
+  text-align: end;
+  align-self: flex-end;
+  color: var(--danger);
+}
+
+.icon {
+  pointer-events: none;
 }

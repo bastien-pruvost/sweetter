@@ -1,0 +1,18 @@
+{% layout '../layout.liquid' %}
+{% block %}
+
+<header class="main-header">
+  <h2>Accueil</h2>
+</header>
+
+<main>
+
+  <section class="tweet-list" id="tweet-list-container">
+
+    {% include './tweet-list.liquid' %}
+
+  </section>
+</main>
+
+<script src="/js/tweets/tweet.js"></script>
+{% endblock %}
