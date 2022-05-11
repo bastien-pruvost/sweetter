@@ -1,5 +1,7 @@
 const tweetQueries = require('../queries/tweets.queries');
 
+// -- Pages --
+
 exports.tweetList = async (req, res, next) => {
   try {
     const tweets = await tweetQueries.getAllTweets();
@@ -10,8 +12,21 @@ exports.tweetList = async (req, res, next) => {
 };
 
 exports.tweetNew = (req, res, next) => {
-  res.render('tweets/tweet-form');
+  res.render('tweets/tweet-form', { tweet: {} });
 };
+
+exports.tweetEdit = async (req, res, next) => {
+  try {
+    const tweetId = req.params.tweetId;
+    const tweet = await tweetQueries.getTweet(tweetId);
+    res.render('tweets/tweet-form', { tweet });
+    console.log(tweet);
+  } catch (err) {
+    next(err);
+  }
+};
+
+// -- Methods --
 
 exports.tweetCreate = async (req, res, next) => {
   try {
@@ -32,5 +47,18 @@ exports.tweetDelete = async (req, res, next) => {
     res.render('tweets/tweet-list', { tweets });
   } catch (err) {
     next(err);
+  }
+};
+
+exports.tweetUpdate = async (req, res, next) => {
+  const tweetId = req.params.tweetId;
+  try {
+    const body = req.body;
+    await tweetQueries.updateTweet(tweetId, body);
+    res.redirect('/tweets');
+  } catch (err) {
+    const errors = Object.keys(err.errors).map(key => err.errors[key].message);
+    const tweet = await tweetQueries.getTweet(tweetId);
+    res.status(400).render('tweets/tweet-form', { errors, tweet });
   }
 };

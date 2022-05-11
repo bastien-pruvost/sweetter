@@ -8,8 +8,15 @@
 
 <main>
 
-  <form action="/tweets" method="post" class="tweet-form">
-    <textarea name="content" id="content" placeholder="Quoi de neuf ?" class="tweet-form__text"></textarea>
+  {% if tweet._id %}
+  {% assign formAction = '/tweets/update/' | append: tweet._id %}
+  {% else %}
+  {% assign formAction = '/tweets' %}
+  {% endif %}
+
+  <form action="{{ formAction }}" method="post" class="tweet-form">
+
+    <textarea name="content" id="content" placeholder="Quoi de neuf ?" class="tweet-form__text">{{ tweet.content }}</textarea>
 
     {% if errors %}
     <ul>

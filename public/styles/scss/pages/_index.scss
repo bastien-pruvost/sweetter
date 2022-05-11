@@ -36,22 +36,35 @@
   margin-left: auto;
 }
 
+.tweet-form__error {
+  color: var(--danger);
+  font-weight: 500;
+}
+
 .tweet {
   @include flex(flex-start, stretch, column);
   border-bottom: 1px solid var(--greyLight);
   padding: 2rem 0;
 }
+
 .tweet__profile {
   margin-bottom: 1rem;
 }
 
-.tweet__delete-btn {
-  padding: 1rem;
-  font-size: 1.5rem;
-  margin-left: auto;
-  text-align: end;
+.tweet-buttons-group {
+  padding: 0.5rem;
+  font-size: 1.2rem;
   align-self: flex-end;
+}
+
+.tweet__delete-btn {
   color: var(--danger);
+  font-size: 1.5rem;
+}
+
+.tweet__edit-btn {
+  color: var(--primary);
+  font-size: 1.5rem;
 }
 
 .icon {
