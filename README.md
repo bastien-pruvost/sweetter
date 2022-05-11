@@ -10,7 +10,7 @@ Clone of twitter to practice in Node.js (with Dyma.fr courses)
 
 - Node.js
 - JavaScript
-- Html
+- Liquid / Html
 - Sass
 
 ## Getting Started
@@ -27,9 +27,9 @@ npm install
 
 npm start
 
-<!-- ### To create a production build :
+### Go to the url :
 
-npm run build -->
+http://localhost:3000/ (Default port: 3000)
 
 <!-- #### Running
 
