@@ -11,6 +11,9 @@
   }
   &:active {
   }
+  @include mobile-only {
+    padding: 1rem;
+  }
 }
 
 .btn--primary {

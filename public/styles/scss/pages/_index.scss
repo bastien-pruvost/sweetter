@@ -3,6 +3,9 @@
   border-left: 1px solid var(--greyLight);
   border-right: 1px solid var(--greyLight);
   min-height: 100vh;
+  @include mobile-only {
+    padding: 0 1rem;
+  }
 }
 
 .main-header {
@@ -55,6 +58,10 @@
   padding: 0.5rem;
   font-size: 1.2rem;
   align-self: flex-end;
+}
+
+.tweet-buttons-group > .btn {
+  margin-left: 0.5rem;
 }
 
 .tweet__delete-btn {

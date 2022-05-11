@@ -1,5 +1,5 @@
 .sidebar-left {
-  padding: 0 2rem;
+  padding-right: 2rem;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -40,7 +40,7 @@
   .sidebar-left {
     @include flex(flex-start, center, column);
     text-align: center;
-    padding: 0 1.5rem;
+    padding-right: 1.6rem;
   }
   .sidebar-left__logo__brand {
     display: none;
@@ -61,6 +61,6 @@
 
 @include mobile-only {
   .sidebar-left {
-    padding: 0 0.5rem;
+    padding-right: 0.8rem;
   }
 }
