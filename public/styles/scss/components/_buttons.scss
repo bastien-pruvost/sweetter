@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: 1.5rem;
+  padding: 1.3rem;
   font-size: 1.8rem;
   text-align: center;
   cursor: pointer;
@@ -10,9 +10,6 @@
   &:hover {
   }
   &:active {
-  }
-  @include mobile-only {
-    padding: 1rem;
   }
 }
 
@@ -25,4 +22,12 @@
 .btn--danger {
   background-color: red;
   color: white;
+}
+
+.btn--sweeter {
+  width: 160px;
+  @include tablet-only {
+    width: 5rem;
+    height: 5rem;
+  }
 }

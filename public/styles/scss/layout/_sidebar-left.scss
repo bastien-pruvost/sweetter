@@ -1,4 +1,5 @@
 .sidebar-left {
+  @include flex(space-between, center, column);
   padding-right: 2rem;
   height: 100vh;
   position: sticky;
@@ -28,17 +29,20 @@
 }
 
 .navbar__link__icon {
-  margin-left: 0.75rem;
   margin-right: 2rem;
   font-size: 2.25rem;
 }
 .navbar__sweeter-btn-icon {
   display: none;
+  line-height: 2.3rem;
+}
+
+.sidebar-left__user-profile {
+  margin: 3.5vh 0;
 }
 
 @include tablet-only {
   .sidebar-left {
-    @include flex(flex-start, center, column);
     text-align: center;
     padding-right: 1.6rem;
   }
@@ -56,6 +60,9 @@
   }
   .navbar__sweeter-btn-icon {
     display: inline-block;
+  }
+  .sidebar-left__user-profile__text {
+    display: none;
   }
 }
 
