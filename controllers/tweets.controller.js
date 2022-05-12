@@ -30,8 +30,9 @@ exports.tweetEdit = async (req, res, next) => {
 
 exports.tweetCreate = async (req, res, next) => {
   try {
+    console.log(req.user);
     const body = req.body;
-    await tweetQueries.createTweet(body);
+    await tweetQueries.createTweet({ ...body, author: req.user._id });
     res.redirect('/tweets');
   } catch (err) {
     const errors = Object.keys(err.errors).map(key => err.errors[key].message);
