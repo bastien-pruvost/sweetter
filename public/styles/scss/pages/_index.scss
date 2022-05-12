@@ -26,6 +26,14 @@
   margin-bottom: 1rem;
 }
 
+.tweet__content {
+  margin: 1rem 0;
+}
+.tweet__content > p {
+  white-space: pre-wrap;
+  line-height: 2.3rem;
+}
+
 .tweet-buttons-group {
   padding: 0.5rem;
   font-size: 1.2rem;
@@ -34,6 +42,13 @@
 
 .tweet-buttons-group > .btn {
   margin-left: 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--greyMedium);
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    background-color: var(--greyLight);
+  }
 }
 
 .tweet__delete-btn {

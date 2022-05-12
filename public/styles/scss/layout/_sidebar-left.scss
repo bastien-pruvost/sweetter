@@ -25,13 +25,22 @@
 }
 
 .navbar__link {
-  display: block;
+  @include flex(flex-start, center);
   margin: 2rem 0;
+  transition: 0.15s ease-in-out;
+}
+
+.navbar__link:hover {
+  color: var(--primary);
 }
 
 .navbar__link__icon {
   margin-right: 2rem;
   font-size: 2.25rem;
+}
+
+.navbar__link__text {
+  font-weight: 500;
 }
 .navbar__sweeter-btn-icon {
   display: none;
