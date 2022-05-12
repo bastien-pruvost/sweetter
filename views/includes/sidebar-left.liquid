@@ -4,25 +4,41 @@
     <h1 class="sidebar-left__logo__brand">Sweetter</h1>
   </a>
   <nav class="navbar">
-    <a href="#" class="navbar__link">
+
+    {% if isAuthenticated %}
+    <a href="/" class="navbar__link">
       <i class="navbar__link__icon fa-solid fa-house"></i><span class="navbar__link__text">Accueil</span>
     </a>
-    <a href="#" class="navbar__link">
-      <i class="navbar__link__icon fa-solid fa-right-to-bracket"></i><span class="navbar__link__text">Connexion</span>
+
+    <a href="/auth/signout" class="navbar__link">
+      <i class="navbar__link__icon fa-solid fa-right-from-bracket"></i><span class="navbar__link__text">Se déconnecter</span>
     </a>
+    {% else %}
+    <a href="/auth/signin/form" class="navbar__link">
+      <i class="navbar__link__icon fa-solid fa-right-to-bracket"></i><span class="navbar__link__text">Se connecter</span>
+    </a>
+
+    <a href="/users/signup/form" class="navbar__link">
+      <i class="navbar__link__icon fa-solid fa-user-plus"></i></i><span class="navbar__link__text">Inscription</span>
+    </a>
+    {% endif %}
 
   </nav>
 </header>
 
-
-
 <div>
+
   <a href="/tweets/new" class="btn btn--primary btn--sweeter">
     <i class="navbar__sweeter-btn-icon fa-solid fa-terminal"></i><span class="navbar__link__text">Sweeter</span>
   </a>
+
+  {% if isAuthenticated %}
   <div class="sidebar-left__user-profile">
-    <img src="" alt="" class="sidebar-left__user-profile__img">
-    <div class="sidebar-left__user-profile__text"></div>
+    <img src="/images/profil-pic.webp" alt="" class="sidebar-left__user-profile__img">
+    <div class="sidebar-left__user-profile__text">
+      {{ currentUser.username }}
+    </div>
   </div>
+  {% endif %}
 
 </div>

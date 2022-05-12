@@ -1,6 +1,7 @@
 .sidebar-left {
   @include flex(space-between, center, column);
   padding-right: 2rem;
+  padding-bottom: 3.5vh;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -38,7 +39,16 @@
 }
 
 .sidebar-left__user-profile {
-  margin: 3.5vh 0;
+  @include flex(flex-start, center);
+  margin-top: 3.5vh;
+}
+
+.sidebar-left__user-profile__img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 @include tablet-only {

@@ -3,7 +3,14 @@
 {% block %}
 
 <header class="main-header">
+
+  {% if tweet.content %}
+  <h2>Modifier le sweet</h2>
+
+  {% else %}
   <h2>Rediger un sweet</h2>
+  {% endif %}
+
 </header>
 
 <main>
@@ -14,21 +21,21 @@
   {% assign formAction = '/tweets' %}
   {% endif %}
 
-  <form action="{{ formAction }}" method="post" class="tweet-form">
+  <form action="{{ formAction }}" method="post" class="form">
 
-    <textarea name="content" id="content" placeholder="Quoi de neuf ?" class="tweet-form__text">{{ tweet.content }}</textarea>
+    <textarea name="content" id="content" placeholder="Quoi de neuf ?" class="form__text">{{ tweet.content }}</textarea>
 
     {% if errors %}
     <ul>
 
       {% for error in errors %}
-      <li class="tweet-form__error">{{ error }}</li>
+      <li class="form__error">{{ error }}</li>
       {% endfor %}
 
     </ul>
     {% endif %}
 
-    <input type="submit" class="tweet-form__submit btn btn--primary">
+    <input type="submit" class="form__submit btn btn--primary">
   </form>
 
 

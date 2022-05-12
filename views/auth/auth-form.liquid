@@ -1,0 +1,41 @@
+{% layout '../layout.liquid' %}
+
+{% block %}
+
+<header class="main-header">
+  <h2>Connexion</h2>
+</header>
+
+<main>
+
+  <form action="/auth/signin" method="post" class="form">
+
+    <div class="form__group">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+    </div>
+
+    <div class="form__group">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password">
+    </div>
+
+    {% if errors %}
+    <ul>
+
+      {% for error in errors %}
+      <li class="form__error">{{ error }}</li>
+      {% endfor %}
+
+    </ul>
+    {% endif %}
+
+    <div class="form__group">
+      <button type="submit" class="form__submit btn btn--primary">Se connecter</button>
+    </div>
+
+  </form>
+
+</main>
+
+{% endblock %}

@@ -12,13 +12,13 @@
   width: 100%;
   height: 4rem;
   padding: 0.2rem 1rem;
+  border: 1px solid var(--greyMedium);
   border-radius: 10rem;
   outline: none;
-  border: none;
   background-color: var(--greyLight);
 
   &:focus {
-    border: 1px solid var(--greyMedium);
+    border: 1px solid var(--greyDark);
   }
 }
 

@@ -1,0 +1,66 @@
+// --- Main ---
+.form__submit {
+  display: block;
+  font-size: 1.6rem;
+  outline: none;
+  padding: 1.2rem 3.5rem;
+  margin-left: auto;
+}
+
+.form__error {
+  color: var(--danger);
+  font-weight: 500;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+// --- Tweet form ---
+.form__text {
+  display: block;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--greyMedium);
+  outline: none;
+
+  &:focus {
+    border: 1px solid var(--greyDark);
+  }
+}
+
+// --- Signup form ---
+
+.form__group {
+  @include flex(center, flex-start, column);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form__group > label {
+  margin-bottom: 1rem;
+}
+
+.form__group > input {
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 3.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--greyMedium);
+  outline: none;
+
+  &:focus {
+    border: 1px solid var(--greyDark);
+  }
+}
