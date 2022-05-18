@@ -68,4 +68,22 @@
   pointer-events: none;
 }
 
-//
+// --- Profile ---
+
+.hidden-input {
+  display: none;
+}
+
+.profile {
+  padding: 1rem 2rem;
+  @include mobile-only {
+    padding: 1rem 1rem;
+  }
+}
+
+.profile__pic {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  cursor: pointer;
+}

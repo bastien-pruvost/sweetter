@@ -34,14 +34,14 @@
     <i class="navbar__sweeter-btn-icon fa-solid fa-terminal"></i><span class="navbar__link__text">Sweeter</span>
   </a>
 
-  <div class="sidebar-left__user-profile">
+  <a class="sidebar-left__user-profile" href="/users/me">
 
-    <img src="/images/profil-pic.webp" alt="" class="sidebar-left__user-profile__img">
+    <img src="{{ currentUser.avatar }}" alt="" class="sidebar-left__user-profile__img">
 
     <span class="sidebar-left__user-profile__text"> {{ currentUser.username }} </span>
 
-  </div>
+  </a>
 
   {% endif %}
 
-</div>+
+</div>

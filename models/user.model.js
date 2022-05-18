@@ -7,7 +7,8 @@ const userSchema = schema({
   local: {
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true }
-  }
+  },
+  avatar: { type: String, default: '/images/profil-pic.webp' }
 });
 
 userSchema.statics.hashPassword = password => {
