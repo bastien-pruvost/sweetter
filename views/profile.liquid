@@ -9,15 +9,15 @@
 
   <form action="/users/update/image" method="post" enctype="multipart/form-data" id="form-avatar">
     <label for="input-avatar">
-      <img src="{{ currentUser.avatar }}" alt="" class="profile__pic">
+      <img src="{{ user.avatar }}" alt="" class="profile__pic">
     </label>
     <input type="file" name="avatar" id="input-avatar" class="hidden-input">
 
   </form>
 
 
-  <p class="profile__username"> {{ currentUser.username }} </p>
-  <p class="profile__email"> {{ currentUser.local.email }} </p>
+  <p class="profile__username"> {{ user.username }} </p>
+  <p class="profile__email"> {{ user.local.email }} </p>
 
   <div class="profile__counters">
 
@@ -31,13 +31,12 @@
       <span>132</span>
     </div>
 
-    <!-- <div class="profile__counters__following">
-
-  </div> -->
 
   </div>
 
 </div>
+
+{% include './tweets/tweet-list.liquid' %}
 
 <script src="/js/profile.js"></script>
 

@@ -26,7 +26,20 @@
 }
 
 .tweet__profile {
+  @include flex(flex-start, center, row);
   margin-bottom: 1rem;
+}
+
+.tweet__profile__pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.tweet__profile__name {
+  margin-left: 1.5rem;
+  font-weight: 600;
+  font-size: 1.8rem;
 }
 
 .tweet__content {

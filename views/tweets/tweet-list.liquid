@@ -1,21 +1,33 @@
-{% if tweets %}
-{% for tweet in tweets %}
-<div class="tweet">
+<section class="tweet-list" id="tweet-list-container">
 
-  <div class="tweet__profile">
-    USER -- @UserOne
+  {% if tweets %}
+  {% for tweet in tweets %}
+  <div class="tweet">
+
+    <div class="tweet__profile">
+      <img src="{{ tweet.author.avatar }}" alt="" class="tweet__profile__pic">
+      <span class="tweet__profile__name">{{ tweet.author.username }}</span>
+    </div>
+
+    <div class="tweet__content">
+      <p>{{ tweet.content }}</p>
+    </div>
+
+    {% if editable and tweet.author._id == currentUser._id %}
+
+    <div class="tweet-buttons-group">
+      <button onclick="window.location.href='/tweets/edit/{{ tweet._id }}'" class="btn tweet__edit-btn" data-tweetid="{{ tweet._id }}"><i class="fa-solid fa-pen-to-square icon"></i></button>
+      <button class="btn tweet__delete-btn" data-tweetid="{{ tweet._id }}"><i class="fa-solid fa-trash-can icon"></i></button>
+    </div>
+
+    {% endif %}
+
   </div>
 
-  <div class="tweet__content">
-    <p>{{ tweet.content }}</p>
-  </div>
-
-  <div class="tweet-buttons-group">
-    <button onclick="window.location.href='/tweets/edit/{{ tweet._id }}'" class="btn tweet__edit-btn" data-tweetid="{{ tweet._id }}"><i class="fa-solid fa-pen-to-square icon"></i></button>
-    <button class="btn tweet__delete-btn" data-tweetid="{{ tweet._id }}"><i class="fa-solid fa-trash-can icon"></i></button>
-  </div>
+</section>
 
 
-</div>
 {% endfor %}
 {% endif %}
+
+<script src="/js/tweets/tweet.js"></script>

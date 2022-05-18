@@ -55,9 +55,12 @@
 .sidebar-left__user-profile__img {
   width: 4rem;
   height: 4rem;
-  margin-right: 1rem;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.sidebar-left__user-profile__text {
+  margin-left: 1rem;
 }
 
 @include tablet-only {
@@ -79,6 +82,9 @@
   }
   .navbar__sweeter-btn-icon {
     display: inline-block;
+  }
+  .sidebar-left__user-profile {
+    justify-content: center;
   }
   .sidebar-left__user-profile__text {
     display: none;
