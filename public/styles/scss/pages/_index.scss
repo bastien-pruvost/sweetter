@@ -1,17 +1,17 @@
 // --- LAYOUT ---
 .main-container {
-  padding: 0rem 2rem;
   border-left: 1px solid var(--greyLight);
   border-right: 1px solid var(--greyLight);
   min-height: 100vh;
-  @include mobile-only {
-    padding: 0 1rem;
-  }
 }
 
 .main-header {
   @include flex(space-between, center, row);
   height: 6rem;
+  padding: 0 2rem;
+  @include mobile-only {
+    padding: 0rem 1rem;
+  }
 }
 
 // --- Homepage (Tweets) ---
@@ -19,7 +19,10 @@
 .tweet {
   @include flex(flex-start, stretch, column);
   border-bottom: 1px solid var(--greyLight);
-  padding: 2rem 0;
+  padding: 2rem 2rem;
+  @include mobile-only {
+    padding: 1rem 1rem;
+  }
 }
 
 .tweet__profile {

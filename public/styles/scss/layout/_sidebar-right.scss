@@ -11,14 +11,16 @@
 .searchbar {
   width: 100%;
   height: 4rem;
-  padding: 0.2rem 1rem;
-  border: 1px solid var(--greyMedium);
+  padding: 0.25rem 1.25rem;
+  font-family: var(--fontMain);
+  border: 1px solid var(--greyLight);
   border-radius: 10rem;
-  background-color: var(--greyLight);
+  background-color: rgb(242, 246, 248);
   outline: none;
 
   &:focus {
-    border: 1px solid var(--greyDark);
+    border: 1px solid var(--primary);
+    background-color: transparent;
   }
 }
 

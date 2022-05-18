@@ -6,12 +6,16 @@
   cursor: pointer;
   border: none;
   border-radius: 10rem;
+  transition: 0.15s ease-in-out;
 }
 
 .btn--primary {
   background-color: var(--primary);
   color: white;
   font-weight: 600;
+  &:hover {
+    background-color: var(--primaryDark);
+  }
 }
 
 .btn--danger {

@@ -28,17 +28,20 @@
 
 <div>
 
+  {% if isAuthenticated %}
+
   <a href="/tweets/new" class="btn btn--primary btn--sweeter">
     <i class="navbar__sweeter-btn-icon fa-solid fa-terminal"></i><span class="navbar__link__text">Sweeter</span>
   </a>
 
-  {% if isAuthenticated %}
   <div class="sidebar-left__user-profile">
+
     <img src="/images/profil-pic.webp" alt="" class="sidebar-left__user-profile__img">
-    <div class="sidebar-left__user-profile__text">
-      {{ currentUser.username }}
-    </div>
+
+    <span class="sidebar-left__user-profile__text"> {{ currentUser.username }} </span>
+
   </div>
+
   {% endif %}
 
-</div>
+</div>+
