@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
   const formAvatar = document.querySelector('#form-avatar');
   const inputAvatar = document.querySelector('#input-avatar');
 

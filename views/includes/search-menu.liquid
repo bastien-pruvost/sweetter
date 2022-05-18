@@ -1,0 +1,20 @@
+<div class="search-menu" id="search-menu">
+  {% if users and users.length > 0 %}
+  {% for user in users %}
+
+  <a class="search-menu__item" href="/users/{{user.username}}">
+    <img src="{{ user.avatar }}" alt="">
+    <span>{{ user.username }}</span>
+  </a>
+
+  {% endfor %}
+
+  {% else %}
+
+  <div class="search-menu__item">
+    <span>Pas d'utilisateur</span>
+  </div>
+
+  {% endif %}
+
+</div>

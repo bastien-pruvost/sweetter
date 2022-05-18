@@ -38,7 +38,7 @@
 
 .tweet__profile__name {
   margin-left: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.8rem;
 }
 
@@ -88,6 +88,7 @@
 }
 
 .profile {
+  @include flex(flex-start, center, row);
   padding: 1rem 2rem;
   @include mobile-only {
     padding: 1rem 1rem;
@@ -95,8 +96,21 @@
 }
 
 .profile__pic {
-  width: 15rem;
-  height: 15rem;
+  width: 12.5rem;
+  height: 12.5rem;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.profile__names {
+  margin-left: 2rem;
+}
+.profile__username {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.profile__counters {
+  margin-left: auto;
 }

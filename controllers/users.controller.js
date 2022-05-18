@@ -61,3 +61,14 @@ exports.userProfile = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.usersList = async (req, res, next) => {
+  try {
+    const search = req.query.search;
+    const users = await usersQueries.searchUsersByUsername(search);
+    res.render('includes/search-menu', { users });
+    console.log(users.length);
+  } catch (err) {
+    next(err);
+  }
+};
