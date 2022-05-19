@@ -24,6 +24,7 @@ exports.updateTweet = (tweetId, tweet) => {
 exports.getCurrentUserTweetsAndFollowingTweets = user => {
   return Tweet.find({ author: { $in: [...user.following, user._id] } })
     .populate('author')
+    .sort({ createdAt: -1 })
     .exec();
 };
 

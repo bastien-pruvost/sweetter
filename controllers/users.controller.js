@@ -2,6 +2,7 @@ const usersQueries = require('../queries/users.queries');
 const tweetQueries = require('../queries/tweets.queries');
 const path = require('path');
 const multer = require('multer');
+const fs = require('fs');
 const upload = multer({
   storage: multer.diskStorage({
     destination: (req, file, cb) => {
@@ -37,9 +38,12 @@ exports.uploadImage = [
   async (req, res, next) => {
     try {
       const user = req.user;
-      user.avatar = `/images/avatars/${req.file.filename}`;
-      await user.save();
-      res.redirect('/');
+      // Delete file before assign new file in the callback of fs unlink
+      fs.unlink(`public${user.avatar}`, async () => {
+        user.avatar = `/images/avatars/${req.file.filename}`;
+        await user.save();
+        res.redirect('/');
+      });
     } catch (err) {
       next(err);
     }
