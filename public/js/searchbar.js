@@ -12,6 +12,15 @@ window.addEventListener('DOMContentLoaded', () => {
   const searchbarInput = document.querySelector('#searchbar');
   let timeout;
 
+  searchbarInput.addEventListener('click', event => {
+    fetch(`/users?search=`)
+      .then(res => res.text())
+      .then(data => {
+        searchMenuContainer.innerHTML = data;
+      })
+      .catch(err => console.log(err));
+  });
+
   searchbarInput.addEventListener('input', event => {
     const value = event.target.value;
     timeout && clearTimeout(timeout);

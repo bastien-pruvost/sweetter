@@ -4,6 +4,8 @@ public/styles/unprefixed-css/
 node_modules/
 *.log
 public/images/avatars/
+!public/images/avatars/profile-pic.png
+
 # OS generated files
 
 .DS_Store

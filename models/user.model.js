@@ -8,7 +8,7 @@ const userSchema = schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true }
   },
-  avatar: { type: String, default: '/images/profil-pic.webp' },
+  avatar: { type: String, default: '/images/avatars/profile-pic.png' },
   following: { type: [schema.Types.ObjectId], ref: 'user' },
   followers: { type: [schema.Types.ObjectId], ref: 'user' }
 });
