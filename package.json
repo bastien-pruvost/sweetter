@@ -1,6 +1,9 @@
 {
   "name": "sweetter",
   "version": "1.0.0",
+    "engines": {
+    "node": "16.x"
+  },
   "description": "Twitter clone with node.js",
   "main": "app.js",
   "scripts": {
