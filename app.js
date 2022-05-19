@@ -5,7 +5,7 @@ const errorhandler = require('errorhandler');
 const routing = require('./routes');
 require('./database');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3333;
 const app = express();
 
 exports.app = app;
@@ -33,19 +33,21 @@ app.use(routing);
 // ---
 
 // Manage errors
-if (process.env.NODE_ENV === 'development') {
-  app.use(errorhandler());
-} else {
-  app.use((err, req, res, next) => {
-    const code = err.code || 500;
-    res.status(code).json({
-      code: code,
-      message: code === 500 ? null : err.message
-    });
-  });
-}
+// if (process.env.NODE_ENV === 'development') {
+//   app.use(errorhandler());
+// } else {
+//   app.use((err, req, res, next) => {
+//     const code = err.code || 500;
+//     res.status(code).json({
+//       code: code,
+//       message: code === 500 ? null : err.message
+//     });
+//   });
+// }
 // ---
 
 // Listen request
-app.listen(port);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 // ---

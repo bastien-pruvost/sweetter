@@ -15,7 +15,9 @@ public/images/avatars/
 ehthumbs.db
 Thumbs.db
 
-.elasticbeanstalk/
+
+.gitignore
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
