@@ -14,11 +14,3 @@ public/images/avatars/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-
-.gitignore
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
