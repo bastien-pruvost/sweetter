@@ -3,7 +3,7 @@ const tweetQueries = require('../queries/tweets.queries');
 const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
-const { upload } = require('../config/cloudinary.config');
+const { uploadCloudinary, deleteCloudinary } = require('../config/cloudinary.config');
 
 exports.signupForm = (req, res, next) => {
   res.render('users/user-form', { errors: null });
@@ -25,22 +25,16 @@ exports.signup = async (req, res, next) => {
 };
 
 exports.uploadImage = [
-  upload.single('avatar'),
+  uploadCloudinary.single('avatar'),
   async (req, res, next) => {
     try {
       const user = req.user;
-      // if (user.avatar !== '/images/avatars/profile-pic.png') {
-      //   // Delete file before assign new file in the callback of fs unlink
-      //   fs.unlink(`public${user.avatar}`, async () => {
-      //     user.avatar = `/images/avatars/${req.file.filename}`;
-      //     await user.save();
-      //     res.redirect('/');
-      //   });
-      // } else {
-      // user.avatar = `/images/avatars/${req.file.filename}`;
-      // await user.save();
+      if (user.avatar !== '/images/avatars/profile-pic.png') {
+        deleteCloudinary(user.avatar);
+      }
+      user.avatar = req.file.filename;
+      await user.save();
       res.redirect('/');
-      // }
     } catch (err) {
       next(err);
     }

@@ -8,7 +8,7 @@
 <div class="profile">
   <form action="/users/update/image" method="post" enctype="multipart/form-data" id="form-avatar">
     <label for="input-avatar">
-      <img src="{{ user.avatar }}" alt="" class="profile__pic">
+      <img src="https://res.cloudinary.com/daihl0cta/image/upload/c_thumb,w_200,g_face/v1652974096/{{ user.avatar }}" alt="" class="profile__pic">
     </label>
     <input type="file" name="avatar" id="input-avatar" class="hidden-input">
 
