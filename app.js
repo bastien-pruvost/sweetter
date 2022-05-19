@@ -33,17 +33,17 @@ app.use(routing);
 // ---
 
 // Manage errors
-// if (process.env.NODE_ENV === 'development') {
-//   app.use(errorhandler());
-// } else {
-//   app.use((err, req, res, next) => {
-//     const code = err.code || 500;
-//     res.status(code).json({
-//       code: code,
-//       message: code === 500 ? null : err.message
-//     });
-//   });
-// }
+if (process.env.NODE_ENV === 'development') {
+  app.use(errorhandler());
+} else {
+  app.use((err, req, res, next) => {
+    const code = err.code || 500;
+    res.status(code).json({
+      code: code,
+      message: code === 500 ? null : err.message
+    });
+  });
+}
 // ---
 
 // Listen request
