@@ -24,10 +24,17 @@
     padding: 1rem 1rem;
   }
 }
+.tweet:nth-child(1) {
+  border-top: 1px solid var(--greyLight);
+}
 
 .tweet__profile {
   @include flex(flex-start, center, row);
   margin-bottom: 1rem;
+}
+
+.tweet__profile > a {
+  @include flex(center, center, row);
 }
 
 .tweet__profile__pic {
@@ -89,9 +96,12 @@
 
 .profile {
   @include flex(flex-start, center, row);
+  gap: 1.5rem;
   padding: 1rem 2rem;
   @include mobile-only {
+    @include flex(flex-start, center, column);
     padding: 1rem 1rem;
+    text-align: center;
   }
 }
 
@@ -102,15 +112,43 @@
   cursor: pointer;
 }
 
-.profile__names {
-  margin-left: 2rem;
-}
 .profile__username {
   font-size: 2.1rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+}
+
+.profile__email {
+  margin-top: 1rem;
 }
 
 .profile__counters {
+  @include flex(center, center, column);
+  align-self: stretch;
+  gap: 1rem;
   margin-left: auto;
+  @include mobile-only {
+    @include flex(flex-start, stretch, column);
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+
+.profile__counters__stats > div {
+  @include flex(space-between, center, row);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile__counters__stats > div > span:nth-child(1) {
+  font-weight: 500;
+}
+
+.profile__counters__stats > div > span:nth-child(2) {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.profile__follow-btn {
+  margin-top: 1.5rem;
 }

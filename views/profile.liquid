@@ -6,7 +6,6 @@
 </header>
 
 <div class="profile">
-
   <form action="/users/update/image" method="post" enctype="multipart/form-data" id="form-avatar">
     <label for="input-avatar">
       <img src="{{ user.avatar }}" alt="" class="profile__pic">
@@ -22,7 +21,9 @@
     {% if currentUser._id != user._id %}
 
     {% if currentUser.following contains user._id %}
-
+    <a href="/users/unfollow/{{ user._id }}" class="btn btn--unfollow profile__follow-btn">Ne plus suivre</a>
+    {% else %}
+    <a href="/users/follow/{{ user._id }}" class="btn btn--follow profile__follow-btn">Suivre</a>
     {% endif %}
 
     {% endif %}
@@ -32,16 +33,22 @@
 
   <div class="profile__counters">
 
-    <div class="profile__counters__tweets">
-      <span>Posts</span>
-      <span> {{ tweets.length }} </span>
-    </div>
+    <div class="profile__counters__stats">
+      <div class="profile__counters__tweets">
+        <span>Posts</span>
+        <span> {{ tweets.length }} </span>
+      </div>
 
-    <div class="profile__counters__following">
-      <span>Following</span>
-      <span>132</span>
-    </div>
+      <div class="profile__counters__following">
+        <span>Following</span>
+        <span>{{ user.following.length }}</span>
+      </div>
 
+      <div class="profile__counters__followers">
+        <span>Followers</span>
+        <span>{{ user.followers.length }}</span>
+      </div>
+    </div>
 
   </div>
 

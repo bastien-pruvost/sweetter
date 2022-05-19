@@ -18,6 +18,28 @@
   }
 }
 
+.btn--follow {
+  color: white;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  font-weight: 600;
+  padding: 0.5rem 3rem;
+  &:hover {
+    background-color: var(--primaryDark);
+    border: 1px solid var(--primaryDark);
+  }
+}
+
+.btn--unfollow {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  font-weight: 600;
+  padding: 0.5rem 3rem;
+  &:hover {
+    border: 1px solid var(--primaryDark);
+  }
+}
+
 .btn--danger {
   background-color: red;
   color: white;

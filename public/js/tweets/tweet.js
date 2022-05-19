@@ -1,6 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
-  initDeleteButtons();
-});
+initDeleteButtons();
 
 function initDeleteButtons() {
   const deleteButtons = document.querySelectorAll('.tweet__delete-btn');

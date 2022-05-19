@@ -5,8 +5,10 @@
   <div class="tweet">
 
     <div class="tweet__profile">
-      <img src="{{ tweet.author.avatar }}" alt="" class="tweet__profile__pic">
-      <span class="tweet__profile__name">{{ tweet.author.username }}</span>
+      <a href="/users/{{ tweet.author.username }}">
+        <img src="{{ tweet.author.avatar }}" alt="" class="tweet__profile__pic">
+        <span class="tweet__profile__name">{{ tweet.author.username }}</span>
+      </a>
     </div>
 
     <div class="tweet__content">
@@ -24,10 +26,12 @@
 
   </div>
 
+  {% endfor %}
+  {% endif %}
+
 </section>
 
 
-{% endfor %}
-{% endif %}
+
 
 <script src="/js/tweets/tweet.js"></script>

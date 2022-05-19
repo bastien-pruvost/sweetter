@@ -33,3 +33,18 @@ exports.searchUsersByUsername = search => {
   const regExp = new RegExp(reg, 'i');
   return User.find({ username: { $regex: regExp } }).exec();
 };
+
+exports.addUserIdToCurrentUserFollowing = (currentUser, userId) => {
+  currentUser.following = [...currentUser.following, userId];
+  return currentUser.save();
+};
+
+exports.addCurrentUserIdToUserFollowers = async (currentUser, userId) => {
+  try {
+    const user = await User.findById(userId);
+    user.followers = [...user.followers, currentUser._id];
+    return user.save();
+  } catch (err) {
+    throw err;
+  }
+};

@@ -55,7 +55,8 @@ exports.userProfile = async (req, res, next) => {
       tweets,
       isAuthenticated: req.isAuthenticated(),
       currentUser: req.user,
-      user: user
+      user: user,
+      editable: true
     });
   } catch (err) {
     next(err);
@@ -68,6 +69,26 @@ exports.usersList = async (req, res, next) => {
     const users = await usersQueries.searchUsersByUsername(search);
     res.render('includes/search-menu', { users });
     console.log(users.length);
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.userFollow = async (req, res, next) => {
+  try {
+    const userId = req.params.userId;
+    const [, , user] = await Promise.all([
+      usersQueries.addUserIdToCurrentUserFollowing(req.user, userId),
+      usersQueries.addCurrentUserIdToUserFollowers(req.user, userId),
+      usersQueries.findUserById(userId)
+    ]);
+    res.redirect(`/users/${user.username}`);
+  } catch (err) {
+    next(err);
+  }
+};
+exports.userUnfollow = async (req, res, next) => {
+  try {
   } catch (err) {
     next(err);
   }
