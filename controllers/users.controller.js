@@ -29,18 +29,18 @@ exports.uploadImage = [
   async (req, res, next) => {
     try {
       const user = req.user;
-      if (user.avatar !== '/images/avatars/profile-pic.png') {
-        // Delete file before assign new file in the callback of fs unlink
-        fs.unlink(`public${user.avatar}`, async () => {
-          user.avatar = `/images/avatars/${req.file.filename}`;
-          await user.save();
-          res.redirect('/');
-        });
-      } else {
-        user.avatar = `/images/avatars/${req.file.filename}`;
-        await user.save();
-        res.redirect('/');
-      }
+      // if (user.avatar !== '/images/avatars/profile-pic.png') {
+      //   // Delete file before assign new file in the callback of fs unlink
+      //   fs.unlink(`public${user.avatar}`, async () => {
+      //     user.avatar = `/images/avatars/${req.file.filename}`;
+      //     await user.save();
+      //     res.redirect('/');
+      //   });
+      // } else {
+      // user.avatar = `/images/avatars/${req.file.filename}`;
+      // await user.save();
+      res.redirect('/');
+      // }
     } catch (err) {
       next(err);
     }
