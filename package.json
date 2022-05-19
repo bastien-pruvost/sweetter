@@ -7,7 +7,7 @@
   "description": "Twitter clone with node.js",
   "main": "app.js",
   "scripts": {
-    "start:dev": "set DB_PASS=public-password&&node app.js",
+    "start:dev": "node app.js",
     "start": "node app.js",
     "sass": "sass --watch ./public/styles/scss/:./public/styles/unprefixed-css/ --style expanded",
     "prefix": "postcss ./public/styles/unprefixed-css/*.css --use autoprefixer -d ./public/styles/css/",
