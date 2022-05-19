@@ -89,6 +89,13 @@ exports.userFollow = async (req, res, next) => {
 };
 exports.userUnfollow = async (req, res, next) => {
   try {
+    const userId = req.params.userId;
+    const [, , user] = await Promise.all([
+      usersQueries.removeUserIdFromCurrentUserFollowing(req.user, userId),
+      usersQueries.removeCurrentUserIdFromUserFollowers(req.user, userId),
+      usersQueries.findUserById(userId)
+    ]);
+    res.redirect(`/users/${user.username}`);
   } catch (err) {
     next(err);
   }

@@ -48,3 +48,18 @@ exports.addCurrentUserIdToUserFollowers = async (currentUser, userId) => {
     throw err;
   }
 };
+
+exports.removeUserIdFromCurrentUserFollowing = (currentUser, userId) => {
+  currentUser.following = currentUser.following.filter(objId => objId.toString() !== userId);
+  return currentUser.save();
+};
+
+exports.removeCurrentUserIdFromUserFollowers = async (currentUser, userId) => {
+  try {
+    const user = await User.findById(userId);
+    user.followers = user.followers.filter(objId => objId.toString() !== currentUser._id.toString());
+    return user.save();
+  } catch (err) {
+    throw err;
+  }
+};
