@@ -3,16 +3,7 @@ const tweetQueries = require('../queries/tweets.queries');
 const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
-const upload = multer({
-  storage: multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, path.join(__dirname, '../public/images/avatars'));
-    },
-    filename: (req, file, cb) => {
-      cb(null, `${Date.now()} - ${file.originalname}`);
-    }
-  })
-});
+const { upload } = require('../config/cloudinary.config');
 
 exports.signupForm = (req, res, next) => {
   res.render('users/user-form', { errors: null });
