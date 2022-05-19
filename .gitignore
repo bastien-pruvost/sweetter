@@ -4,7 +4,6 @@ public/styles/unprefixed-css/
 node_modules/
 *.log
 database/index.js
-public/images/avatars/
 # OS generated files
 
 .DS_Store
