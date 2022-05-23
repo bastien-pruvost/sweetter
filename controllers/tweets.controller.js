@@ -26,7 +26,6 @@ exports.tweetEdit = async (req, res, next) => {
     const tweetId = req.params.tweetId;
     const tweet = await tweetQueries.getTweet(tweetId);
     res.render('tweets/tweet-form', { tweet, isAuthenticated: req.isAuthenticated(), currentUser: req.user });
-    console.log(tweet);
   } catch (err) {
     next(err);
   }
@@ -66,6 +65,7 @@ exports.tweetUpdate = async (req, res, next) => {
   const tweetId = req.params.tweetId;
   try {
     const body = req.body;
+    console.log(body);
     await tweetQueries.updateTweet(tweetId, body);
     res.redirect('/tweets');
   } catch (err) {

@@ -4,7 +4,7 @@
 
   <a class="search-menu__item" href="/users/{{user.username}}">
     <img src="https://res.cloudinary.com/daihl0cta/image/upload/c_thumb,w_200,g_face/v1652974096/{{ user.avatar }}" alt="">
-    <span>{{ user.username }}</span>
+    <span>{{ user.username | escape }}</span>
   </a>
 
   {% endfor %}

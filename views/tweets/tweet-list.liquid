@@ -5,14 +5,14 @@
   <div class="tweet">
 
     <div class="tweet__profile">
-      <a href="/users/{{ tweet.author.username }}">
+      <a href="/users/{{ tweet.author.username | escape }}">
         <img src="https://res.cloudinary.com/daihl0cta/image/upload/c_thumb,w_200,g_face/v1652974096/{{ tweet.author.avatar }}" alt="" class="tweet__profile__pic">
         <span class="tweet__profile__name">{{ tweet.author.username }}</span>
       </a>
     </div>
 
     <div class="tweet__content">
-      <p>{{ tweet.content }}</p>
+      <p>{{ tweet.content | escape }}</p>
     </div>
 
     {% if editable and tweet.author._id == currentUser._id %}

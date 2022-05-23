@@ -13,15 +13,16 @@ function requestTweetDelete(tweetId) {
   fetch(`/tweets/${tweetId}`, {
     method: 'DELETE'
   })
-    .then(res => res.text())
-    .then(htmlText => displayTweets(htmlText))
+    .then(() => location.reload())
+    // .then(res => res.text())
+    // .then(htmlText => displayTweets(htmlText))
     .catch(err => {
       console.log(err);
     });
 }
 
-function displayTweets(htmlText) {
-  const container = document.querySelector('#tweet-list-container');
-  container.innerHTML = htmlText;
-  initDeleteButtons();
-}
+// function displayTweets(htmlText) {
+//   const container = document.querySelector('#tweet-list-container');
+//   container.innerHTML = htmlText;
+//   initDeleteButtons();
+// }

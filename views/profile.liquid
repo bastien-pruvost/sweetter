@@ -15,8 +15,8 @@
   </form>
 
   <div class="profile__names">
-    <p class="profile__username"> {{ user.username }} </p>
-    <p class="profile__email"> {{ user.local.email }} </p>
+    <p class="profile__username"> {{ user.username | escape }} </p>
+    <p class="profile__email"> {{ user.local.email | escape }} </p>
 
     {% if currentUser._id != user._id %}
 

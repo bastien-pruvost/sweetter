@@ -38,7 +38,7 @@
 
     <img src="https://res.cloudinary.com/daihl0cta/image/upload/c_thumb,w_200,g_face/v1652974096/{{ currentUser.avatar }}" alt="" class="sidebar-left__user-profile__img">
 
-    <span class="sidebar-left__user-profile__text"> {{ currentUser.username }} </span>
+    <span class="sidebar-left__user-profile__text"> {{ currentUser.username | escape }} </span>
 
   </a>
 
