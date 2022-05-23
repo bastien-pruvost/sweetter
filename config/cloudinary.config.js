@@ -1,18 +1,16 @@
 const cloudinary = require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
-
-function randomInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.CLOUD_API_KEY,
   api_secret: process.env.CLOUD_API_SECRET
 });
+
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
@@ -30,6 +28,7 @@ exports.deleteCloudinary = publicId => {
 
 exports.uploadCloudinary = multer({ storage: storage });
 
+// Local multer save :
 // exports.upload = multer({
 //   storage: multer.diskStorage({
 //     destination: (req, file, cb) => {

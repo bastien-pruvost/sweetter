@@ -1,8 +1,5 @@
 const usersQueries = require('../queries/users.queries');
 const tweetQueries = require('../queries/tweets.queries');
-const path = require('path');
-const multer = require('multer');
-const fs = require('fs');
 const { uploadCloudinary, deleteCloudinary } = require('../config/cloudinary.config');
 
 exports.signupForm = (req, res, next) => {
