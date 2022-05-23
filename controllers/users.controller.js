@@ -1,17 +1,18 @@
 const usersQueries = require('../queries/users.queries');
 const tweetQueries = require('../queries/tweets.queries');
 const { uploadCloudinary, deleteCloudinary } = require('../config/cloudinary.config');
+const authCtrl = require('../controllers/auth.controller');
 
 exports.signupForm = (req, res, next) => {
   res.render('users/user-form', { errors: null });
 };
 
 exports.signup = async (req, res, next) => {
-  console.log(req.body);
   const body = req.body;
   try {
     const user = await usersQueries.createUser(body);
-    res.redirect('/');
+    authCtrl.signin(req, res, next);
+    // res.redirect('/');
   } catch (err) {
     res.render('users/user-form', {
       errors: [err.message],
