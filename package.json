@@ -7,7 +7,7 @@
   "description": "Twitter clone with node.js",
   "main": "app.js",
   "scripts": {
-    "start:dev": "set NODE_ENV=development&&node app.js",
+    "start:dev": "set NODE_ENV=development&&node -r dotenv/config app.js",
     "start": "set NODE_ENV=production&&node app.js",
     "sass": "sass --watch ./public/styles/scss/:./public/styles/unprefixed-css/ --style expanded",
     "prefix": "postcss ./public/styles/unprefixed-css/*.css --use autoprefixer -d ./public/styles/css/",

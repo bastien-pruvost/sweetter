@@ -26,7 +26,7 @@ exports.uploadImage = [
   async (req, res, next) => {
     try {
       const user = req.user;
-      if (user.avatar !== '/images/avatars/profile-pic.png') {
+      if (user.avatar !== 'sweetter-profile-pics/profile-pic.png') {
         deleteCloudinary(user.avatar);
       }
       user.avatar = req.file.filename;
