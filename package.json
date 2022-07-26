@@ -16,14 +16,14 @@
   "browserslist": "defaults",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dev-BastienPruvost/sweetter.git"
+    "url": "git+https://github.com/Bastien-Pruvost/sweetter.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dev-BastienPruvost/sweetter/issues"
+    "url": "https://github.com/Bastien-Pruvost/sweetter/issues"
   },
-  "homepage": "https://github.com/Dev-BastienPruvost/sweetter#readme",
+  "homepage": "https://github.com/Bastien-Pruvost/sweetter#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.30.1",
