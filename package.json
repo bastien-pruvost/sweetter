@@ -1,18 +1,28 @@
 {
   "name": "sweetter",
   "version": "1.0.0",
+  "private": true,
+  "description": "Twitter clone with node.js",
+  "keywords": [],
+  "homepage": "https://github.com/bastien-pruvost/sweetter#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Bastien Pruvost",
+    "url": "https://github.com/bastien-pruvost"
+  },
+  "main": "app.js",
   "engines": {
     "node": "16.x"
   },
-  "description": "Twitter clone with node.js",
-  "main": "app.js",
+  "browserslist": "defaults",
   "scripts": {
-    "start:dev": "set NODE_ENV=development&&node -r dotenv/config app.js",
+    "dev": "set NODE_ENV=development&&node -r dotenv/config app.js",
     "start": "set NODE_ENV=production&&node app.js",
     "sass": "sass --watch ./public/styles/scss/:./public/styles/unprefixed-css/ --style expanded",
     "prefix": "postcss ./public/styles/unprefixed-css/*.css --use autoprefixer -d ./public/styles/css/",
     "autoprefix": "onchange \"./public/styles/unprefixed-css/*.css\" -- npm run prefix"
   },
+<<<<<<< HEAD
   "browserslist": "defaults",
   "repository": {
     "type": "git",
@@ -24,6 +34,8 @@
     "url": "https://github.com/Bastien-Pruvost/sweetter/issues"
   },
   "homepage": "https://github.com/Bastien-Pruvost/sweetter#readme",
+=======
+>>>>>>> 63c9317 (feat: add noindex meta tag, update readme, gitignore, license and package.json)
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.30.1",

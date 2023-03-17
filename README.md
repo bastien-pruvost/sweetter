@@ -1,36 +1,148 @@
-# Sweetter (Clone of twitter)
+<!-- prettier-ignore-start -->
 
-<a href="https://sweetter.herokuapp.com/" target="_blank"><img src="https://img.shields.io/badge/ctrl_%2B_click_here_to_see_the_website-324050?style=for-the-badge&logo=github&logoColor=white" /></a>
+<!-- Rename all occurences with Cmd + D :
+
+Sweetter (Twitter clone)
+sweetter
+www.projectlink.com
+https://www.projectlink.com
+https://www.documentationlink.com
+
+ -->
+
+# Sweetter (Twitter clone)
+
+Clone of twitter to practice on Node.js / Express
+
 
 ## About the project
 
-Clone of twitter to practice in Node.js (with Dyma.fr courses)
+I developed this project to practice and create a dynamic site in SSR only.
 
-## Built with
+Pages are rendered on the server using `liquidjs` template engine.
 
+
+## Features
+
+- SSR
+- Template Engine
+- Images hosting
+- CRUD (Create, Read, Update, Delete)
+
+
+## Tech Stack
+
+#### Server (Full Server Side Rendering):
+- Javascript
 - Node.js
-- JavaScript
-- Liquid / Html
+- Express
+- Liquid (for html templates)
 - Sass
+- Cloudinary (for images hosting)
 
-## Getting Started
 
-### Clone the repo :
+## Run locally
 
-- git clone https://github.com/Dev-BastienPruvost/sweetter.git
+1. Clone the project:
 
-### Install dependencies :
+```bash
+  git clone https://github.com/bastien-pruvost/sweetter.git
+```
 
-- npm install
+2. Go to the project directory:
 
-### Create a development build with a live server :
+```bash
+  cd sweetter
+```
 
-- npm start
+1. Install dependencies:
 
-### Go to the url :
+```bash
+  pnpm install
+  # or
+  yarn install
+  # or
+  npm install
+```
 
-- http://localhost:3000/ (Default port)
+2. Run sass and autoprefixer in two different terminals:
 
-## Credits
+```bash
+  pnpm sass
+  # or
+  yarn sass
+  # or
+  npm run sass
+```
 
-Project developed by Dev-BastienPruvost
+```bash
+  pnpm autoprefix
+  # or
+  yarn autoprefix
+  # or
+  npm run autoprefix
+```
+
+3. Run the development server:
+
+```bash
+  pnpm dev
+  # or
+  yarn dev
+  # or
+  npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+## Start project in production
+
+To start the app in production run the following command:
+
+```bash
+  pnpm start
+  # or
+  yarn start
+  # or
+  npm start
+```
+
+
+## Report bug / Support
+
+To report a bug or get help [open an issue](https://github.com/bastien-pruvost/sweetter/issues).
+
+
+## Suggestions
+
+If you have any suggestion, feel free to [open an issue](https://github.com/bastien-pruvost/sweetter/issues) with the tag "enhancement"
+
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and open a pull request.
+
+1. [Fork the project](https://github.com/bastien-pruvost/sweetter/fork)
+2. Create your feature branch (`git checkout -b feature/my-feature`)
+3. Code your feature
+4. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+5. Push to the branch (`git push origin feature/my-feature`)
+6. [Open a pull request](https://github.com/bastien-pruvost/sweetter/compare)
+
+You can also simply [open an issue](https://github.com/bastien-pruvost/sweetter/issues) with the tag "enhancement".
+
+Don't forget to give the project a star! Thanks again!
+
+
+## License
+
+Distributed under the [MIT License](https://choosealicense.com/licenses/mit/).
+
+See `LICENSE` file for more information.
+
+
+
+<!-- prettier-ignore-end -->
